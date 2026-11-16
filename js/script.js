@@ -517,3 +517,31 @@ document.getElementById("totalCars").textContent = cars.length;
 
 displayCars();
 
+const carGrid = document.getElementById("carGrid");
+
+function displayCars() {
+    if (!carGrid) {
+        console.error("Car grid element was not found!");
+        return;
+    }
+
+    carGrid.innerHTML = "";
+
+    cars.forEach(car => {
+        carGrid.innerHTML += `
+            <div class="car-card">
+                <img src="${car.image}" alt="${car.name}">
+                <div class="car-info">
+                    <h3>${car.name}</h3>
+                    <p>${car.category}</p>
+                    <p>${car.description}</p>
+                    <button onclick="showCarDetails(${car.id})">
+                        View Specifications
+                    </button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+displayCars();
