@@ -184,3 +184,7 @@ console.log("AutoVerse South African cars:", southAfricanCars.length);
 
 // If using this file as a separate script in the browser:
 window.southAfricanCars = southAfricanCars;
+
+console.log("AutoVerse South African database loaded!");
+
+console.log("Total cars:", southAfricanCars.length);
