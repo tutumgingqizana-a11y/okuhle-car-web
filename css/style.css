@@ -579,3 +579,6 @@ footer {
     background: #ff3030;
     border-radius: 10px;
 }
+body {
+    background: red !important;
+}
