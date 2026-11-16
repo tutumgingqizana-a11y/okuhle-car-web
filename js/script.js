@@ -4,7 +4,9 @@
 // ======================================
 
 
-const cars = window.southAfricanCars;
+const cars = window.southAfricanCars || [];
+
+console.log("Cars available for display:", cars.length);
     {
         id: 1,
         name: "Porsche 911 GT3",
