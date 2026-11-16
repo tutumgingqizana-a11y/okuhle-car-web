@@ -514,3 +514,4 @@ document.addEventListener("keydown", event => {
 document.getElementById("totalCars").textContent = cars.length;
 
 displayCars();
+const cars = window.southAfricanCars;
