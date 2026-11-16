@@ -179,12 +179,7 @@ Object.entries(catalogue).forEach(([brand, models]) => {
   });
 });
 
-// Make the database available to your website.
-console.log("AutoVerse South African cars:", southAfricanCars.length);
-
-// If using this file as a separate script in the browser:
 window.southAfricanCars = southAfricanCars;
 
-console.log("AutoVerse South African database loaded!");
+console.log("Car database loaded:", southAfricanCars.length);
 
-console.log("Total cars:", southAfricanCars.length);
