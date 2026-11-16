@@ -3,8 +3,8 @@
 // AUTOVERSE - VEHICLE DATABASE
 // ======================================
 
-const cars = [
 
+const cars = window.southAfricanCars;
     {
         id: 1,
         name: "Porsche 911 GT3",
@@ -514,4 +514,4 @@ document.addEventListener("keydown", event => {
 document.getElementById("totalCars").textContent = cars.length;
 
 displayCars();
-const cars = window.southAfricanCars;
+
