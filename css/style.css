@@ -433,3 +433,149 @@ footer {
         height: 200px;
     }
 }
+
+/* =================================
+   AUTOVERSE PREMIUM BACKGROUND THEME
+================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 40, 40, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(80, 80, 100, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #050505,
+            #111318,
+            #08090c
+        );
+
+    background-attachment: fixed;
+}
+
+/* PREMIUM HERO BACKGROUND */
+
+.hero {
+    min-height: 550px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.15)
+        ),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+/* SECTION BACKGROUND */
+
+.container {
+    background: rgba(15, 17, 22, 0.75);
+    padding: 60px 6%;
+}
+
+/* PREMIUM CARDS */
+
+.car-card {
+    background: linear-gradient(
+        145deg,
+        #1b1e25,
+        #090a0d
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    transition: all 0.4s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff3030;
+
+    box-shadow:
+        0 0 15px rgba(255,48,48,0.25),
+        0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* RED RACING HEADINGS */
+
+h1 span,
+.section-title {
+    color: #ff3030;
+    text-shadow: 0 0 15px rgba(255,48,48,0.2);
+}
+
+/* BUTTON THEME */
+
+button,
+.main-btn {
+    background: linear-gradient(
+        135deg,
+        #ff3030,
+        #a50000
+    );
+
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+button:hover,
+.main-btn:hover {
+    box-shadow: 0 0 20px rgba(255,48,48,0.5);
+    transform: scale(1.03);
+}
+
+/* NAVIGATION */
+
+header {
+    background: rgba(5,5,5,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,48,48,0.25);
+}
+
+/* FOOTER */
+
+footer {
+    background: #030303;
+    border-top: 1px solid #292929;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3030;
+    border-radius: 10px;
+}
