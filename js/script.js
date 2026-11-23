@@ -545,3 +545,84 @@ function displayCars() {
 }
 
 displayCars();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector("#carSearch");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const carCards = document.querySelectorAll(".car-card");
+    const resultCount = document.querySelector("#resultCount");
+    const noResults = document.querySelector("#noResults");
+
+    let activeCategory = "all";
+
+    function filterCars() {
+        const searchText = searchInput.value
+            .toLowerCase()
+            .trim();
+
+        let visibleCount = 0;
+
+        carCards.forEach(card => {
+            const name = card.dataset.name || "";
+            const brand = card.dataset.brand || "";
+            const category = card.dataset.category || "";
+            const description = card.textContent || "";
+
+            const searchableText =
+                `${name} ${brand} ${category} ${description}`
+                .toLowerCase();
+
+            const matchesSearch =
+                searchableText.includes(searchText);
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                category.toLowerCase() ===
+                activeCategory.toLowerCase();
+
+            const shouldShow =
+                matchesSearch && matchesCategory;
+
+            card.hidden = !shouldShow;
+
+            if (shouldShow) {
+                visibleCount++;
+            }
+        });
+
+        if (resultCount) {
+            resultCount.textContent =
+                `${visibleCount} car(s) found`;
+        }
+
+        if (noResults) {
+            noResults.hidden = visibleCount !== 0;
+        }
+    }
+
+    // Live search
+    if (searchInput) {
+        searchInput.addEventListener("input", filterCars);
+    }
+
+    // Category filters
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            activeCategory = button.dataset.category;
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+                btn.setAttribute("aria-pressed", "false");
+            });
+
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+
+            filterCars();
+        });
+    });
+
+    // Initial filtering
+    filterCars();
+});
