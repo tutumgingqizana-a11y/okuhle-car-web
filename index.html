@@ -173,3 +173,63 @@
 <script src="js/cars-sa.js"></script>
 <script src="js/script.js"></script>
 </body>
+
+<input
+    type="search"
+    id="carSearch"
+    placeholder="Search by car name or manufacturer..."
+    aria-label="Search cars"
+/>
+
+<p id="resultCount" aria-live="polite"></p>
+
+<div class="filter-buttons">
+    <button class="filter-btn active"
+        data-category="all"
+        aria-pressed="true">All Cars</button>
+
+    <button class="filter-btn"
+        data-category="Sports Cars">Sports Cars</button>
+
+    <button class="filter-btn"
+        data-category="Supercars">Supercars</button>
+
+    <button class="filter-btn"
+        data-category="SUVs">SUVs</button>
+
+    <button class="filter-btn"
+        data-category="Off-road Cars">Off-road Cars</button>
+
+    <button class="filter-btn"
+        data-category="Sport Hatchbacks">Sport Hatchbacks</button>
+</div>
+
+<p id="noResults" hidden>
+    No matching cars found. Try another search.
+</p>
+
+
+<div class="car-card"
+     data-name="Golf 8 R"
+     data-brand="Volkswagen"
+     data-category="Sport Hatchbacks">
+
+    <img src="images/golf8r.jpg" alt="Volkswagen Golf 8 R">
+
+    <h3>Volkswagen Golf 8 R</h3>
+    <p>2.0L Turbocharged Engine</p>
+    <p>315 HP</p>
+</div>
+
+<div class="car-card"
+     data-name="BMW M4 Competition"
+     data-brand="BMW"
+     data-category="Sports Cars">
+
+    <img src="images/bmw-m4.jpg" alt="BMW M4 Competition">
+
+    <h3>BMW M4 Competition</h3>
+    <p>3.0L Twin-Turbo Engine</p>
+    <p>503 HP</p>
+</div>
+
